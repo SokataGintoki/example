@@ -1,55 +1,55 @@
 "use strict";
 
-function showFirstMessage() {
-    console.log("Hello World!");
+function showFirstMessage() {  // function - ключевое слово, обозначающее создание функции. showFirstMessage - имя функции
+    console.log("Hello World!"); // действие функции внутри фигурных скобок
 }
 
-showFirstMessage();
+showFirstMessage();             //  showFirstMessage - обращаемся к этой функции () - вызывает саму функцию.
 
-function showFirstMessage(text) {
-    console.log(text);
+function showFirstMessage(text) { // в скобочках пишется аргумент
+    console.log(text);            // выводим на экран аргумент text
 }
 
-showFirstMessage("Hello World!");
+showFirstMessage("Hello World!"); //  Вызываем функцию и задаем данные аргументу text
 
 
-let num = 20;
+let num = 20;                     // задаем переменную num
 
-function showFirstMessage(text) {
-    console.log(text);
-    let num = 10;
-    console.log(num);
+function showFirstMessage(text) { // создаем функцию showFirstMessage с один аргументом text
+    console.log(text);            // выводим на экран значение аргумента text
+    let num = 10;                 // задаем локальную! переменную num, но уже внутри функции
+    console.log(num);             // выводим на экран значение локальной переменной
 }
 
-showFirstMessage("Hello World!");
-console.log(num);
+showFirstMessage("Hello World!"); // обращаемся к функции и задаем аргументу text сообщение
+console.log(num);                 // выводим на экран значение глобальной переменной num 
 
 
-function calc(a, b) {
-    return (a + b);
+function calc(a, b) {             // создаем новую функцию calc, с двумя аргументами a и b
+    return (a + b);               // return - окончание функции. Возвращаем, результат для аргументов a и b
 }
 
-console.log(calc(4, 3));
-console.log(calc(5, 6));
-console.log(calc(10, 6));
+console.log(calc(4, 3));          // пример для функции выше   
+console.log(calc(5, 6));          // такие функции предназначаны для автоматизации процессов
+console.log(calc(10, 6));         // данная функция написана один раз, но подходит для всех трех примеров.
 
 
-function ret() {
-    let num = 50;
-    //
-    return num;
+function ret() {                  // создаем функцию ret
+    let num = 50;                 // создаем локальную переменную num
+    //                            // здесь может выполняться огромный код
+    return num;                   // возвращает в внешний мир, значение локальной переменной 
 }
 
-const anotherNum = ret();
-console.log(anotherNum);
+const anotherNum = ret();         // создаем переменную, в которую записываем результат работы функции ret
+console.log(anotherNum);          // выводим на экран переменную anotherNum
 
 
 
-const logger = function() {
- console.log("Hello");
-};
+const logger = function() {               // задаем переменную logger и присваиваем функцию 
+ console.log("Hello");                    // действие функции, вывод на экран надписи
+};                                        // обязательно ставить после фигурной скобки точку с запятой
 
-logger();
+logger();                      // вызываем функциональной выражение переменной logger  и функции, которая ему присвоена
 
 
 
@@ -65,54 +65,59 @@ logger();
 // };
 
 
+
 // Ещё разок про аргументы функций (д)
 
 
-// function convert (amount) {
-//     console.log(28 * amount);
+
+
+// function convert (amount) {   // создаем функцию для конвертирования, задаем аргумент amount - сумма
+//     console.log(28 * amount); // выводим на экран произведение курса доллара(28) на сумму
 // }
 
-// convert(500);
+// convert(500);                 // задаем у функции convert значение аргумента anount 500
 
 
 
-// const usdCurr = 28,
-//       eurCurr = 32;
+// const usdCurr = 28,           // создаем переменную usdCurr, означающую курс валюты доллара
+//       eurCurr = 32;           // создаем переменную eurCurr, означающую курс валюты евро
 
-// function convert (amount, curr) {
-//     console.log(curr * amount);
+// function convert (amount, curr) { // создаем функцию, задаем 2 аргумента, amount - сумма, curr - курс
+//     console.log(curr * amount);   // выводим на экран произведение курса и суммы
 // }
 
-// convert(500, usdCurr);
-// convert(500, eurCurr);
+// convert(500, usdCurr);   // вызываем функцию и задаем аргументу сумма значение 500, арг-ту курс значение usdCurr
+// convert(500, eurCurr);   // вызываем функцию и задаем аргументу сумма значение 500, арг-ту курс значение eurCurr
+
 
 
 // return в функциях
 
 
-const usdCurr = 28;
-const discount = 0.9;
 
-function convert(amount, curr) {
-   return curr * amount;
+const usdCurr = 28;         // задаем переменную с курсом доллара
+const discount = 0.9;       // задаем переменную скидка
+
+function convert(amount, curr) { // создаем функцию конвертирование с двумя аргументами сумма и курс
+   return curr * amount;     //  возвращаем и заканчиваем функцию произведением двух аргументов
 }
 
-function promotion(result) {
-    console.log(result * discount);
+function promotion(result) { // создаем функцию promotion с аргументом result
+    console.log(result * discount); // аргумент result умножается на скидку
 }
 
-promotion(convert(500, usdCurr));
+promotion(convert(500, usdCurr)); // сначала вызывается convert и с ним будет произведено действие функции promotion
 
 
-function test() {
-    for (let i = 0; i < 5; i ++) {
-        console.log(i);
-        if (i === 3) return
+function test() {                  // создаем функцию test
+    for (let i = 0; i < 5; i ++) { // создаем цикл с переменной i = 0, с условием что i < 5 и с ходом цикла i++
+        console.log(i);            // выводим в консоль значение i
+        if (i === 3) return        // если i строго ровно 3, то заканчиваем функцию и выводим результат
     }
-    console.log('Done');
-}
+    console.log('Done');           // не выводится в консоль, потому что функция увидела ключевое слово return
+}                                  // и закончила работу
 
-test();
+test();                           // обращение к функции и вызов 
 
 
 function doNothing() {};
