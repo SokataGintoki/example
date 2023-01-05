@@ -27,7 +27,18 @@ function returnNeighboringNumbers(number) {
     console.log(trueMassive);
 }
    
-   returnNeighboringNumbers(4);
+   returnNeighboringNumbers(15);
+
+
+   function returnNeighboringNumbers(number) {
+    const trueMassive = [];
+    for ( let i = number; i <= number + 2; i++) {
+    trueMassive[i- number] = i - 1;
+    }
+    console.log(trueMassive);
+}
+   
+   returnNeighboringNumbers(15);
 
 
 
