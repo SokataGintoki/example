@@ -92,3 +92,55 @@ function findMaxNumber(a, b ,c, d) {
 
 findMaxNumber(1, 5, 6.6, 10.5);
 findMaxNumber(1, 5, '6', '10');
+
+
+
+// ЗАДАЧА НА ЧИСЛА ФИБОНАЧЧИ(**)
+
+
+function fib(num) {
+    let trueStr = '';
+   for  (let i = 0; i <= num; i++);
+        trueStr += i;
+        console.log(trueStr);
+    if (typeof(num) !== 'number'){
+        console.log('pustaya stroka');
+    }
+}
+
+fib(3);
+fib('2');
+fib(9);
+fib(7);
+fib(5);
+
+
+// РЕШЕНИЕ УЧИТЕЛЯ
+
+function fib(num) {
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        console.log('');
+    }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if(i + 1 === num) {
+            result += `${first}`;
+        } else {
+            result += `${first} `;
+        }
+        let third = first + second; 
+        first = second;  
+        second = third;  
+    }
+    console.log(result);
+}
+
+fib(3);
+fib('2');
+fib(9);
+fib(7);
+fib(5);
