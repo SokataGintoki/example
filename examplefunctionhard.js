@@ -117,13 +117,13 @@ fib(5);
 
 // РЕШЕНИЕ УЧИТЕЛЯ
 
-function fib(num) {
-    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
-        console.log('');
+function fib(num) {       // создаем функцию fib с одним аргументом num
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) { // если тип аргумента не число или аргумент
+        console.log(''); // меньше либо равен нулю или аргумент не целое число, то выводим пустую строку
     }
 
-    let result = '';
-    let first = 0;
+    let result = '';  // задаем переменную, в которую будем записывать результат 
+    let first = 0;    // 
     let second = 1;
 
     for (let i = 0; i < num; i++) {
