@@ -12,21 +12,31 @@ const personalPlanPeter = {
         exp: '1 month'
     },
     showAgeAndLangs: function() {
-        console.log(`Мне ${personalPlanPeter.age} и я владею языками: ${personalPlanPeter.skills.languages}`);
+        const {age} = personalPlanPeter,
+              {languages} = personalPlanPeter.skills;
+
+        let str = `Мне ${age} и я владею языками: `;
+
+        languages.forEach(function(lang) {
+            str += ` ${lang}`.toUpperCase();
+        });
+           
+        console.log(str);
     }
 };
 
 function showExperience() {
-   console.log(personalPlanPeter.skills.exp);
+    const exp = personalPlanPeter.skills.exp;
+   console.log(exp);
 }
 
 showExperience(personalPlanPeter);
 
 function showProgrammingLangs() {
    for (let key in personalPlanPeter.skills.programmingLangs) {
-    console.log(`Язык ${key} изучен на ${personalPlanPeter.skills.programmingLangs[key]}`);
+    console.log(`Язык ${key} изучен на ${personalPlanPeter.skills.programmingLangs[key]} \n`);
    }
-}
+};
 
 showProgrammingLangs();
 
