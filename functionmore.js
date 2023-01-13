@@ -61,13 +61,13 @@ function showMyDB () {
 showMyDB();
 
 
-// function showMyDB (hidden) {
-//     if (!hidden) {
-//        console.log(personalMovieDB);
-//     }
-// }
+function showMyDB (hidden) {
+    if (!hidden) {
+       console.log(personalMovieDB);
+    }
+}
     
-// showMyDB(personalMovieDB.privat);
+showMyDB(personalMovieDB.privat);
 
 function writeYourGenres() {
   for (let i = 1; i <= 3; i++) {
