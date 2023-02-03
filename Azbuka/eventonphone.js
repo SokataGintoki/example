@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
        event.preventDefault();
        console.log('Start');
        console.log(event.touches);
+       console.log(event.targetTouches);
    });
    box.addEventListener('touchmove', (event) =>{
     event.preventDefault();
@@ -26,3 +27,5 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // touches - выдает список всех пальцев, которые сейчас взаимодействуют с экраном
+// targetTouches -  все пальцы которые взаимодействуют с конкретным элементом
+// changedTouches - список пальцев, которые участвуют в текущем событии

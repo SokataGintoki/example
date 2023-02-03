@@ -31,6 +31,8 @@ const text = document.createTextNode('Авэ всем');
 
 div.classList.add('black');
 
+// document.body.append(div);
+
 wrapper.append(div);
 // wrapper.appendChild(div);
 
