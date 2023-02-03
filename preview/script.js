@@ -1,6 +1,7 @@
 'use strict';
 
-const btns = document.querySelectorAll('button'),
+const btn = document.querySelector('button'),
+      btns = document.querySelectorAll('button'),
       overlay = document.querySelector('.overlay');
 
 // btn.onclick = function() {               // обращаемся к переменной btn, событие onclick обозначает, что 
